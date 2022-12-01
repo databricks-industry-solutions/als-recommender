@@ -37,32 +37,56 @@ job_json = {
         "max_concurrent_runs": 1,
         "tags": {
             "usage": "solacc_testing",
-            "group": "SOLACC"
+            "group": "RCG"
         },
         "tasks": [
             {
-                "job_cluster_key": "sample_solacc_cluster",
+                "job_cluster_key": "ALS_cluster",
                 "notebook_task": {
-                    "notebook_path": f"01_Introduction_And_Setup"
+                    "notebook_path": f"00_Intro & Config"
                 },
-                "task_key": "sample_solacc_01"
+                "task_key": "ALS_01"
             },
             {
-                "job_cluster_key": "sample_solacc_cluster",
+                "job_cluster_key": "ALS_cluster",
                 "notebook_task": {
-                    "notebook_path": f"02_Analysis"
+                    "notebook_path": f"01_Data Preparation"
                 },
-                "task_key": "sample_solacc_02",
+                "task_key": "ALS_02",
                 "depends_on": [
                     {
-                        "task_key": "sample_solacc_01"
+                        "task_key": "ALS_01"
+                    }
+                ]
+            },
+            {
+                "job_cluster_key": "ALS_cluster",
+                "notebook_task": {
+                    "notebook_path": f"02_Model Training"
+                },
+                "task_key": "ALS_03",
+                "depends_on": [
+                    {
+                        "task_key": "ALS_02"
+                    }
+                ]
+            },
+            {
+                "job_cluster_key": "ALS_cluster",
+                "notebook_task": {
+                    "notebook_path": f"03_Model Deployment"
+                },
+                "task_key": "ALS_04",
+                "depends_on": [
+                    {
+                        "task_key": "ALS_03"
                     }
                 ]
             }
         ],
         "job_clusters": [
             {
-                "job_cluster_key": "sample_solacc_cluster",
+                "job_cluster_key": "ALS_cluster",
                 "new_cluster": {
                     "spark_version": "11.3.x-cpu-ml-scala2.12",
                 "spark_conf": {

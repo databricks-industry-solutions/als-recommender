@@ -41,7 +41,7 @@ config['database'] = 'als'
 # create database if not exists
 _ = spark.sql('create database if not exists {0}'.format(config['database']))
 
-# set current datebase context
+# set current database context
 _ = spark.catalog.setCurrentDatabase(config['database'])
 
 # COMMAND ----------

@@ -144,7 +144,7 @@ display(predictions)
 # MAGIC 
 # MAGIC The challenge with MAP@K as an evaluation metric is that it sets an incredibly high bar for selections.  It also is focused on items we've actually selected in the past and in some ways is penalizing us for suggesting new products.  The trick in working with MAP@K is to accept that you're likely to produce lower scores for most recommenders.  Our goal isn't necessarily to push MAP@K to 1.0, but instead to use the metric to compare different recommenders for their relative performance.  In other words, don't evaluate a recommender as good or bad based on its MAP@K score.  Consider its value in driving a higher MAP@K score relative to your next best recommender option.
 # MAGIC 
-# MAGIC To calculate MAP@K for our recommender, we need to decide a value for *k*.  We might choose 10 as that seems like a reasonably sized list of items to present and below that position (depending on our application) we might expect the user to enter into more of a browsing mode of item enagement that depends less on recommendation strength.  We can then ask our model to recommend the top 10 items for each user as follows:
+# MAGIC To calculate MAP@K for our recommender, we need to decide a value for *k*.  We might choose 10 as that seems like a reasonably sized list of items to present and below that position (depending on our application) we might expect the user to enter into more of a browsing mode of item engagement that depends less on recommendation strength.  We can then ask our model to recommend the top 10 items for each user as follows:
 
 # COMMAND ----------
 

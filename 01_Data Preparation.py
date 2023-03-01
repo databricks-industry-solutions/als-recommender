@@ -10,7 +10,7 @@
 
 # MAGIC %md ## Introduction
 # MAGIC 
-# MAGIC In this notebook, we will make accessible purchase history data which will be used as the basis for the construction of a matrix factorization recommender.  The dataset we will use is the [Instacart dataset](https://www.kaggle.com/c/instacart-market-basket-analysis), downloadable from the Kaggle website. We will make the data available through a set of queriable tables and then derive implied ratings from the data before proceeding to the next notebook.
+# MAGIC In this notebook, we will make accessible purchase history data which will be used as the basis for the construction of a matrix factorization recommender.  The dataset we will use is the [Instacart dataset](https://www.kaggle.com/c/instacart-market-basket-analysis), downloadable from the Kaggle website. We will make the data available through a set of queryable tables and then derive implied ratings from the data before proceeding to the next notebook.
 
 # COMMAND ----------
 
@@ -22,7 +22,7 @@
 # MAGIC 
 # MAGIC **NOTE** The name of the mount point, file locations and database used is configurable within the *00_Intro & Config* notebook.
 # MAGIC 
-# MAGIC The individual files that make up each entity in this dataset can then be presented as a queriable table as part of a database with a high-level schema as follows:</p>
+# MAGIC The individual files that make up each entity in this dataset can then be presented as a queryable table as part of a database with a high-level schema as follows:</p>
 # MAGIC 
 # MAGIC <img src='https://brysmiwasb.blob.core.windows.net/demos/images/instacart_schema2.png' width=300>
 # MAGIC 

@@ -25,19 +25,19 @@ os.environ['kaggle_key'] = dbutils.secrets.get("solution-accelerator-cicd", "kag
 
 # COMMAND ----------
 
-# MAGIC %sh 
+# MAGIC %sh -e
 # MAGIC cd /databricks/driver
 # MAGIC export KAGGLE_USERNAME=$kaggle_username
 # MAGIC export KAGGLE_KEY=$kaggle_key
 # MAGIC kaggle competitions download -c instacart-market-basket-analysis
-# MAGIC unzip instacart-market-basket-analysis.zip
-# MAGIC unzip aisles.csv.zip          
-# MAGIC unzip departments.csv.zip     
-# MAGIC unzip order_products__prior.csv.zip  
-# MAGIC unzip order_products__train.csv.zip  
-# MAGIC unzip orders.csv.zip          
-# MAGIC unzip products.csv.zip        
-# MAGIC unzip sample_submission.csv.zip 
+# MAGIC unzip -o instacart-market-basket-analysis.zip
+# MAGIC unzip -o aisles.csv.zip          
+# MAGIC unzip -o departments.csv.zip     
+# MAGIC unzip -o order_products__prior.csv.zip  
+# MAGIC unzip -o order_products__train.csv.zip  
+# MAGIC unzip -o orders.csv.zip          
+# MAGIC unzip -o products.csv.zip        
+# MAGIC unzip -o sample_submission.csv.zip 
 
 # COMMAND ----------
 

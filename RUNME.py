@@ -33,7 +33,7 @@ from solacc.companion import NotebookSolutionCompanion
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC Before setting up the rest of the accelerator, we need set up a few credentials in order to access Kaggle datasets. Grab an API key for your Kaggle account ([documentation](https://www.kaggle.com/docs/api#getting-started-installation-&-authentication) here). Here we demonstrate using the [Databricks Secret Scope](https://docs.databricks.com/security/secrets/secret-scopes.html) for credential management. 
+# MAGIC Before setting up the rest of the accelerator, we need set up a few credentials in order to access Kaggle datasets. Make sure to log into Kaggle and accept the Terms and Conditions of the [dataset](https://www.kaggle.com/competitions/instacart-market-basket-analysis/rules) we use. Grab an API key for your Kaggle account ([documentation](https://www.kaggle.com/docs/api#getting-started-installation-&-authentication) here). Here we demonstrate using the [Databricks Secret Scope](https://docs.databricks.com/security/secrets/secret-scopes.html) for credential management. 
 # MAGIC 
 # MAGIC Copy the block of code below, replace the name the secret scope and fill in the credentials and execute the block. After executing the code, The accelerator notebook will be able to access the credentials it needs.
 # MAGIC 

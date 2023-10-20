@@ -66,7 +66,7 @@ print(f'Sample:\t{ratings_sampled.count()}')
 
 # DBTITLE 1,Generate Train-Test Split
 ratings_train, ratings_test = ratings.randomSplit([0.8, 0.2], random.randrange(100000))
-ratings_sampled_train, ratings_sampled_test = ratings.randomSplit([0.8, 0.2], random.randrange(100000))
+ratings_sampled_train, ratings_sampled_test = ratings_sampled.randomSplit([0.8, 0.2], random.randrange(100000))
 
 # COMMAND ----------
 
